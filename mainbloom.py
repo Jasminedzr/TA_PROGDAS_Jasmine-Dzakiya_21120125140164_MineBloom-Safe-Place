@@ -1,11 +1,9 @@
 # minebloom.py
 import tkinter as tk
-from tkinter import ttk, messagebox, simpledialog
-from collections import deque
+from tkinter import messagebox, simpledialog
 from abc import ABC, abstractmethod
 import random
 import datetime
-import re
 import json
 import os
 
@@ -447,8 +445,6 @@ class MineBloomApp(tk.Tk):
         # Random quick affirmation button
         rand_btn = self._make_button(right, text="Get Random Affirmation", cmd=self._show_random_affirmation, bg="#FFD6E8")
         rand_btn.pack(pady=6)
-
-        # (Previously there was a queue refresh button here; removed since the queue feature was deleted.)
 
     # ---------- Feature screens ----------
     def _open_mood_tracker(self):
