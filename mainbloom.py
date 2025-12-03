@@ -6,6 +6,7 @@ import random
 import datetime
 import json
 import os
+import re
 
 # =========================
 # BUSINESS LOGIC (OOP, Abstraction, Encapsulation, Inheritance, Polymorphism)
@@ -375,7 +376,7 @@ class MineBloomApp(tk.Tk):
             # add a playful friendly suffix
             playful = [
                 "Keep going — you've got this (and maybe a cookie).",
-                "You're doing better than you think — tiny victory dance. 💃",
+                "You're doing better than you think — tiny victory dance.",
                 "Slow breaths. Tiny wins. Big hugs (figurative).",
                 "Tiny progress is still progress — and very cool. 😌",
                 "You matter — and yes, even on weird days."
@@ -720,10 +721,6 @@ class MineBloomApp(tk.Tk):
 
         back_btn = self._make_button(frame, text="Kembali", cmd=self._build_home_screen, bg="#D6F0FF")
         back_btn.pack(pady=18)
-
-    def _open_boundary_reminder(self):
-        # Boundaries Queue feature removed per user request.
-        return
 
     def _open_healing_journal(self):
         # ask for password (encapsulation)
